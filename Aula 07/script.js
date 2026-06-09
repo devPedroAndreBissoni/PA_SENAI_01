@@ -1,3 +1,4 @@
+let resultado = document.querySelector('#resultado')
 function exibirCor(){
     let cor = document.querySelector('#corzinha').value 
     alert(cor)
@@ -6,20 +7,20 @@ function exibirCor(){
 function soma(){
     let valorA = Number(document.querySelector('#valorA').value)
     let valorB = Number(document.querySelector('#valorB').value)
-    alert(valorA + valorB)
+    return resultado.innerHTML = valorA + valorB
 }
 function subi(){
-    let valorC = Number(document.querySelector('#valorC').value)
-    let valorD = Number(document.querySelector('#valorD').value)
-    alert(valorC - valorD)
+    let valorC = Number(document.querySelector('#valorA').value)
+    let valorD = Number(document.querySelector('#valorB').value)
+    return resultado.innerHTML = valorA - valorB
 }
 function multi(){
-    let valorE = Number(document.querySelector('#valorE').value)
-    let valorF = Number(document.querySelector('#valorF').value)
-    alert(valorE * valorF)
+    let valorE = Number(document.querySelector('#valorA').value)
+    let valorF = Number(document.querySelector('#valorB').value)
+    return resultado.innerHTML = valorA * valorB
 }
 function divi(){
-    let valorG = Number(document.querySelector('#valorG').value)
-    let valorH = Number(document.querySelector('#valorH').value)
-    alert(valorG / valorH)
+    let valorG = Number(document.querySelector('#valorA').value)
+    let valorH = Number(document.querySelector('#valorB').value)
+    return resultado.innerHTML = valorA / valorB
 }

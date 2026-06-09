@@ -7,24 +7,20 @@
 </head>
 <body>
     <script src="script.js"></script>
-    
-    <input type="text" placeholder="qual a cor da sua calça?" id="corzinha">
-    <button onclick="exibirCor()">enviar</button>
-
-    <input type="text" placeholder="SOME" id="valorA">
-    <input type="text" placeholder="SOME" id="valorB">
-    <button onclick="soma()">some eles</button>
-    
-    <input type="text" placeholder="DIMINUA" id="valorC">
-    <input type="text" placeholder="DIMINUA" id="valorD">
-    <button onclick="subi()">diminua eles</button>
-    
-    <input type="text" placeholder="MULTIPLIQUE" id="ValorE">
-    <input type="text" placeholder="MULTIPLIQUE" id="valorF">
-    <button onclick="multi()">multiplique eles</button>
-    
-    <input type="text" placeholder="DIVIDA" id="valorG">
-    <input type="text" placeholder="DIVIDA" id="valorH">
-    <button onclick="divi()">divida eles</button>
+    <div>
+        <div>
+            <input type="text" placeholder="qual a cor da sua calça?" id="corzinha">
+            <button onclick="exibirCor()">enviar</button>
+        </div>
+        <div>
+            <input type="text" placeholder="Seu numero A" id="valorA">
+            <input type="text" placeholder="Seu numero B" id="valorB">
+            <button onclick="soma()">some eles</button>
+            <button onclick="subi()">diminua eles</button>
+            <button onclick="multi()">multiplique eles</button>
+            <button onclick="divi()">divida eles</button>
+        </div>
+        <h1>Resultado: <span id="resultado"></span></h1>
+    </div>
 </body>
 </html>
