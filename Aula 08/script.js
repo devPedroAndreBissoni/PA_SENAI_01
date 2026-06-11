@@ -1,9 +1,12 @@
-let resultado = document.querySelector('#cadastro')
+let form = document.querySelector('#cauculando')
 
-function cadastro() {
-    let nome = document.querySelector('#nome').value
-    let sobrenome = document.querySelector('#sobrenome').value
-    let idade = document.querySelector('#idade').value
-    let profissao = document.querySelector('#profissao').value
-    return resultado.innerHTML = `Seu nome e sobrenome ${nome} ${sobrenome} a tua idade é ${idade} e voce trabalha como ${profissao}`
-}
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let valora = Number(document.querySelector('#valora').value)
+    let valorb = Number(document.querySelector('#valorb').value)
+
+    let cauculo = document.querySelector('#cauculo')
+
+    cauculo.innerHTML = `Soma: ${valora + valorb} Subtração: ${valora - valorb} Multiplicação: ${valora * valorb} Divisão: ${valora / valorb}`
+
+})
