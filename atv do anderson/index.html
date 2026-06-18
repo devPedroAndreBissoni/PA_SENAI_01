@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Reseta as margens e define o box-sizing */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo do corpo da página (Fundo e centralização) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ocupa 100% da altura da tela */
+            padding: 20px;
+        }
+
+        /* Caixa principal do formulário */
+        .container {
+            background-color: #ffffff;
+            padding: 35px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        /* Título */
+        .container h2 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        /* Div que engloba a label e o input */
+        .campo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 18px;
+        }
+
+        /* Estilo dos textos descritivos */
+        .campo label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        /* Estilo das caixas de texto e seleção */
+        .campo input,
+        .campo select {
+            padding: 12px 15px;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #2d3748;
+            background-color: #f8fafc;
+            transition: all 0.3s ease;
+        }
+
+        /* Efeito ao clicar nas caixas de texto */
+        .campo input:focus,
+        .campo select:focus {
+            outline: none;
+            border-color: #8742e1;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+        }
+
+        /* Oculta as setinhas chatas do input tipo "number" do CPF */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+        input[type=number] {
+            -moz-appearance: textfield; /* Para Firefox */
+        }
+
+        /* Botão de cadastro */
+        button[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background-color:  #a748ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        /* Efeito ao passar o mouse no botão */
+        button[type="submit"]:hover {
+            background-color: #7e35c2;
+        }
+
+        /* Efeito ao clicar no botão */
+        button[type="submit"]:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+        <h2>Cadastre-se</h2>
+        
+    <form action="salvar.php" method="POST">
+
+        <div class="campo">
+            <label for="nome">O seu nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="campo">
+            <label for="sobrenome">O seu sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome" required>
+        </div>
+        <div class="campo">
+            <label for="nomepai">O nome de seu Pai:</label>
+            <input type="text" id="nomepai" name="nomepai" required>
+        </div>
+        <div class="campo">
+            <label for="nomemae">O nome de sua Mãe:</label>
+            <input type="text" id="nomemae" name="nomemae" required>
+        </div>
+        <div class="campo">
+            <label for="turma">A sua turma:</label>
+            <input type="text" id="turma" name="turma" required>
+        </div>
+        <div class="campo">
+            <label for="serie">A sua serie:</label>
+            <select name="serie" id="serie" required>
+                <option value="">selecione sua serie</option>
+                <option>1º ano</option>
+                <option>2º ano</option>
+                <option>3º ano</option>
+
+            </select>
+        </div>
+        <div class="campo">
+            <label  for="cpf">O seu cpf:</label>
+            <input  type="number" 
+                    id="cpf" 
+                    name="cpf"
+                    placeholder="000.000.000-00" 
+                    maxlength="11"
+                    required>
+        </div>
+
+            <button type="submit">cadastrar</button>
+
+        
+    </form>
+
+</div>
+
+</body>
+</html>
